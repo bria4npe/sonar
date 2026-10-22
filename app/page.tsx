@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="container">
       <p className="eyebrow">Proyecto de ejemplo</p>
-      <h1>Next.js + Sonar</h1>
+      <h1>Next.js + SonarCloud</h1>
       <p>
         Una app mínima con algunos defectos lógicos intencionados para comprobar
         qué detecta el análisis estático.
