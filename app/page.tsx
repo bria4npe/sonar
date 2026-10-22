@@ -30,7 +30,8 @@ export default function Home() {
       </section>
 
       <p className="hint">
-        Revisa <code>lib/demo.ts</code> para localizar los casos sembrados.
+        Revisa <code>lib/sonar-bugs.ts</code> para localizar los diez casos
+        sembrados.
       </p>
     </main>
   );

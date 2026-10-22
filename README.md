@@ -44,8 +44,16 @@ SonarCloud.
 
 ## Casos sembrados
 
-- Condición repetida para el tipo de cliente VIP.
-- Tratamiento de cero como valor positivo.
-- Acceso al primer elemento sin comprobar si la lista está vacía.
+`lib/sonar-bugs.ts` contiene diez ejemplos adicionales para el análisis:
+
+- Ramas que devuelven el mismo resultado y una condición contradictoria.
+- Variable local sin usar y asignación sobrescrita.
+- Bucle infinito, ternario booleano redundante y ternario anidado.
+- Literales repetidos, función vacía y condición duplicada.
+
+`lib/demo.ts` conserva otros ejemplos, como la condición VIP duplicada y el
+acceso al primer elemento sin comprobar si la lista está vacía. Son defectos
+intencionados; no llames a `runInfiniteLoop`, porque no termina. La cantidad y
+clasificación de hallazgos dependerán de las reglas activas en SonarCloud.
 
 La detección exacta depende de la edición y las reglas activadas en Sonar.
