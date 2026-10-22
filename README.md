@@ -21,9 +21,12 @@ Abre <http://localhost:3000>.
 
 ## Analizar con SonarCloud en GitHub Actions
 
-El workflow `.github/workflows/sonarcloud.yml` analiza el proyecto en cada push,
-pull request y cuando se ejecuta manualmente desde la pestaña **Actions**. No
-necesitas instalar Node.js ni `node_modules` en tu PC para ese análisis.
+El workflow `.github/workflows/sonarcloud.yml` analiza el proyecto en cada push
+a cualquier rama, en pull requests y cuando se ejecuta manualmente desde la
+pestaña **Actions**. En los pushes, SonarCloud publica el análisis en la rama
+correspondiente de GitHub; el nombre de rama lo detecta automáticamente desde
+GitHub Actions. No necesitas instalar Node.js ni `node_modules` en tu PC para
+ese análisis.
 
 En la configuración del repositorio de GitHub, agrega:
 

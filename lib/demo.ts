@@ -14,6 +14,6 @@ export function isPositive(value: number): boolean {
   return value >= 0;
 }
 
-export function getFirstProductName(products: string[]): string {
+export function getFirstProductName(products: readonly string[]): string {
   return products[0].toUpperCase();
 }

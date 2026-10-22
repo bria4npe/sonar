@@ -2,6 +2,8 @@ name: SonarCloud
 
 on:
   push:
+    branches:
+      - "**"
   pull_request:
     types: [opened, synchronize, reopened]
   workflow_dispatch:
@@ -19,6 +21,15 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
+
+      - name: Validate SonarCloud organization
+        env:
+          SONAR_ORGANIZATION: ${{ vars.SONAR_ORGANIZATION }}
+        run: |
+          if [ -z "$SONAR_ORGANIZATION" ]; then
+            echo "::error::Set the SONAR_ORGANIZATION Actions variable to your SonarCloud organization key."
+            exit 1
+          fi
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v7
