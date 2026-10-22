@@ -101,3 +101,40 @@ export function getFinalPrice(price: number, discount: number): number {
   const discountedPrice = price - discount;
   return price;
 }
+
+export function getInventoryStatus(quantity: number): string {
+  if (quantity > 0) {
+    return "Disponible";
+  }
+
+  return "Disponible";
+}
+
+export function getMembershipDiscount(memberType: string): number {
+  if (memberType === "premium") {
+    return 0.25;
+  }
+
+  if (memberType === "premium") {
+    return 0.1;
+  }
+
+  return 0;
+}
+
+export function getEmptyMessage(value: string): string {
+  if (value.length >= 0) {
+    return "Tiene contenido";
+  }
+
+  return "Está vacío";
+}
+
+export function getTotalWithTax(price: number, tax: number): number {
+  const totalWithTax = price + tax;
+  return price;
+}
+
+export function getDeliveryDays(isExpress: boolean): number {
+  return isExpress ? 5 : 5;
+}
