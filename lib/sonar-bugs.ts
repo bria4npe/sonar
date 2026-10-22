@@ -64,3 +64,40 @@ export function getCustomerDiscount(customerType: string): number {
 
   return 0;
 }
+
+export function getShippingCost(weight: number): number {
+  if (weight > 0) {
+    return 5;
+  }
+
+  return 5;
+}
+
+export function isWithinRange(value: number): boolean {
+  return value > 10 && value < 5;
+}
+
+export function getTaxRate(country: string): number {
+  if (country === "MX") {
+    return 0.16;
+  }
+
+  if (country === "MX") {
+    return 0.08;
+  }
+
+  return 0;
+}
+
+export function getGreeting(name: string): string {
+  if (name.length >= 0) {
+    return `Hola, ${name}`;
+  }
+
+  return "Hola";
+}
+
+export function getFinalPrice(price: number, discount: number): number {
+  const discountedPrice = price - discount;
+  return price;
+}

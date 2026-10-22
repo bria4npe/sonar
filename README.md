@@ -44,12 +44,13 @@ SonarCloud.
 
 ## Casos sembrados
 
-`lib/sonar-bugs.ts` contiene diez ejemplos adicionales para el análisis:
+`lib/sonar-bugs.ts` contiene quince ejemplos adicionales para el análisis:
 
 - Ramas que devuelven el mismo resultado y una condición contradictoria.
 - Variable local sin usar y asignación sobrescrita.
 - Bucle infinito, ternario booleano redundante y ternario anidado.
 - Literales repetidos, función vacía y condición duplicada.
+- Rango imposible, condición siempre verdadera y resultado calculado pero ignorado.
 
 `lib/demo.ts` conserva otros ejemplos, como la condición VIP duplicada y el
 acceso al primer elemento sin comprobar si la lista está vacía. Son defectos
